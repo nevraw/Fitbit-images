@@ -19,6 +19,7 @@ function loadOptions() {
 } 
 
 function getAndStoreConfigData() {
+ var $diag = 'diag';
  var options = {
   diag: $diag
  };
