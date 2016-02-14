@@ -7,22 +7,24 @@ function buttonHandler() {
  var $submitButton = $('#submitButton');
 
  $submitButton.on('click', function() {
-  console.log('Submit');
- 
+//  console.log('Submit');
   var return_to = getQueryParam('return_to', 'pebblejs://close#');
   document.location = return_to + encodeURIComponent(JSON.stringify(getAndStoreConfigData()));
  });
 
- 
+}
+
+function loadOptions() {
+ var $diag = 'diag';
+} 
 
 function getAndStoreConfigData() {
- var $diag = 'diag';
-
  var options = {
   diag: $diag
  };
  
  console.log('Got options: ' + JSON.stringify(options));
+
  return options;
 }
 
